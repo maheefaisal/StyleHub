@@ -1,36 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# StyleHub 🎨
 
-## Getting Started
+A modern, full-stack web application for managing and showcasing styles, built with Next.js, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## 🌟 Features
 
+- Modern and responsive UI with Tailwind CSS
+- Full-stack application with Next.js and TypeScript
+- Secure authentication system
+- Database integration with Prisma and MongoDB
+- Beautiful animations with Framer Motion
+- Data visualization with Recharts
+- Admin dashboard for content management
+- Type-safe API routes with Zod validation
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- MongoDB
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/stylehub.git
+cd stylehub
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Set up environment variables:
+Create a `.env` file in the root directory with the following variables:
+```env
+DATABASE_URL="your_mongodb_connection_string"
+JWT_SECRET="your_jwt_secret"
+NEXT_PUBLIC_API_URL="http://localhost:3000"
+```
+
+4. Set up the database:
+```bash
+npm run prisma:generate
+npm run prisma:migrate
+```
+
+5. Set up admin user:
+```bash
+npm run setup:admin
+```
+
+6. Start the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Built With
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- [Next.js](https://nextjs.org/) - React framework for production
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [Prisma](https://www.prisma.io/) - Database ORM
+- [MongoDB](https://www.mongodb.com/) - Database
+- [Framer Motion](https://www.framer.com/motion/) - Animation library
+- [Recharts](https://recharts.org/) - Composable charting library
+- [Zod](https://zod.dev/) - TypeScript-first schema validation
 
-## Learn More
+## 📁 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+stylehub/
+├── src/
+│   ├── app/          # Next.js app directory
+│   ├── components/   # React components
+│   ├── lib/          # Utility functions
+│   └── types/        # TypeScript types
+├── prisma/           # Database schema and migrations
+├── public/           # Static assets
+└── images/           # Project images
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔧 Available Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run prisma:generate` - Generate Prisma client
+- `npm run prisma:migrate` - Run database migrations
+- `npm run prisma:studio` - Open Prisma Studio
+- `npm run prisma:seed` - Seed database
+- `npm run setup:admin` - Set up admin user
 
-## Deploy on Vercel
+## 🤝 Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👥 Authors
+
+- Your Name - Initial work
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS team for the beautiful styling system
+- All contributors who have helped shape this project

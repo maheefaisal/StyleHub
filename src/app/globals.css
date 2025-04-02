@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import '../lib/animations.css';
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
+    'Helvetica Neue', Arial, sans-serif;
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom utility classes */
+.image-placeholder {
+  background: linear-gradient(to bottom right, #e5e7eb, #d1d5db);
+}
+
+.dark .image-placeholder {
+  background: linear-gradient(to bottom right, #374151, #1f2937);
+}
+
+/* Ensure proper spacing for fixed navbar */
+.pt-navbar {
+  padding-top: 4rem;
+}
+
+/* Ensure proper spacing at the bottom of pages */
+main {
+  padding-bottom: 2rem;
+}
+
+/* Improve link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Custom range slider styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 2px;
+  background: transparent;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+/* Thumb styling for WebKit browsers */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #3b82f6; /* blue-500 */
+  cursor: pointer;
+  margin-top: -10px; /* Center the thumb */
+  box-shadow: 0 0 0 2px white, 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 30;
+  pointer-events: auto;
+}
+
+/* Thumb styling for Firefox */
+input[type="range"]::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #3b82f6; /* blue-500 */
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 0 2px white, 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 30;
+  pointer-events: auto;
+}
+
+/* Thumb styling for IE */
+input[type="range"]::-ms-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #3b82f6; /* blue-500 */
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 0 2px white, 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 30;
+  pointer-events: auto;
+}
+
+/* Track styling for WebKit browsers */
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 4px;
+}
+
+/* Track styling for Firefox */
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 4px;
+}
+
+/* Track styling for IE */
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 4px;
+}
+
+/* Dark mode adjustments */
+.dark input[type="range"]::-webkit-slider-thumb {
+  background: #60a5fa; /* blue-400 */
+  box-shadow: 0 0 0 2px #1f2937, 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dark input[type="range"]::-moz-range-thumb {
+  background: #60a5fa; /* blue-400 */
+  box-shadow: 0 0 0 2px #1f2937, 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dark input[type="range"]::-ms-thumb {
+  background: #60a5fa; /* blue-400 */
+  box-shadow: 0 0 0 2px #1f2937, 0 2px 4px rgba(0, 0, 0, 0.3);
+}
